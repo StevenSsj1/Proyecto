@@ -14,7 +14,7 @@ export default function HomeDash() {
   const [emailDesigner, setEmailDesigner] = useState('');
   const { data: session, status } = useSession();
 
-  console.log(session?.user?.email);
+
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()

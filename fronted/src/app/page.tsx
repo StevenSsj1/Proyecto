@@ -55,10 +55,30 @@ export default function Home() {
 
       </div>
         <div className="snap-center">
-          <IntroductionSection/>
+        <div className="flex justify-center items-center h-screen">
+  <div className="bg-gray-200 p-8 rounded-lg shadow-md flex">
+    <div className="w-1/2 pr-4">
+      <p className="text-black font-semibold text-xl mb-4">Bienvenido a FlowOG</p>
+      <p className="text-gray-700 mb-4">Nos dedicamos a mostrar las últimas tendencias en moda urbana. Nuestra plataforma proporciona un espacio para que los entusiastas de la moda urbana colaboren, compartan ideas y se mantengan inspirados.</p>
+      <p className="text-gray-700">Explora nuestras colecciones, interactúa con personas con intereses similares y libera tu creatividad. Juntos, redefinamos el estilo urbano.</p>
+
+    </div>
+    <div className="w-1/2 pl-4">
+      <form action="https://formspree.io/f/xnqepgvz" method="POST">
+        <label className="block text-gray-700">Tu Correo:</label>
+        <input type="email" name="email" id="email" className="form-input mt-1 block w-full rounded-md border-gray-300
+         shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 mb-4"/>
+        <label className="block text-gray-700">Cuentanos:</label>
+        <textarea name="message" id="message" className="form-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 mb-4"></textarea>
+        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
         </div>
      </div>
-     <ButtonAuth/>
     </main>
   );
 }
