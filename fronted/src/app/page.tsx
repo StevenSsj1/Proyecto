@@ -17,7 +17,6 @@ export default function Home() {
         setColaborations(colaborationsData);
       } catch (error) {
         console.error('Error al obtener colaboraciones:', error);
-        // Maneja el error según tus necesidades
       }
     };
 

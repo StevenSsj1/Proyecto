@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { createUser, authUsuario } = require('./controllers/userController');
-const { createColaboration, getColaborations } = require('./controllers/colaborationController');
+const { createColaboration, getColaborations, editColaborations, deleteColaborations } = require('./controllers/colaborationController');
 const cors = require('cors');
 
 const app = express();
@@ -16,6 +16,9 @@ app.post('/users', createUser);
 app.post('/auth', authUsuario);
 app.post('/colab', createColaboration);
 app.get('/colab', getColaborations);
+app.put('/colab/:id', editColaborations);
+app.delete('/colab/:id', deleteColaborations);
+
 
 // Inicia el servidor
 app.listen(PORT, () => {
